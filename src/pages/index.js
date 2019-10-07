@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled, {keyframes} from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import '../components'
 
 class IndexPage extends React.Component {
   render() {
