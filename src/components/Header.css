@@ -15,7 +15,6 @@
   #site-title {
     margin: auto;
     margin-left: 30px;
-    width: 50%;
     align-items: left;
     justify-items: left;
   }
@@ -72,6 +71,20 @@
     transform: translateY(-3px);
   }
   
-  @media (max-width: 640px) {
-   
+  @media (max-width: 411px) {
+    .Header{
+      grid-template-columns: repeat(2, auto);
+    }
+    #site-title {
+     
+      margin-left: 0px;
+      
+    }
+    .HeaderGroup {
+      display: none;
+    }
+    #get-started{
+      
+      margin-right: 30px;
+  }
   }

@@ -1,0 +1,12 @@
+.LogoCard{
+ width: 100px;
+height: 40px;
+align-items: center;
+display: grid;
+} 
+
+.LogoCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
