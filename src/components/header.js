@@ -41,8 +41,8 @@ class Header extends React.Component {
         </div>
         <div className="HeaderGroup">
           <Link to="/about">About</Link>
-          <Link to="/ourInstructors">Our Instructors</Link>
           <Link to="/blog">Blog</Link>
+          <Link to="/about-us">Our Instructors</Link>
         </div>
 
         <div id="get-started" >
