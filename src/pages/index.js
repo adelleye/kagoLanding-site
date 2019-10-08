@@ -47,6 +47,7 @@ class IndexPage extends React.Component {
                  />
               </LeadingBrandsLogoContainer>
           </LeadingBrandsContainer>
+          
       </LeftGrid>
       <RightGrid>
          <TruckIllustration/>
@@ -88,14 +89,17 @@ font-weight: 500;
 // PAGE STYLING BEGINS HERE
 const Container = styled.div`
 background-color: white;
+@media (max-width: 411px) {
+  
+  }
 `
 
 const FirstBlockContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(2,auto);
+
 @media (max-width: 411px) {
-  max-width: 411px;
-  grid-template-columns: 1;
+
   }
 
 `
@@ -105,11 +109,11 @@ const LeftGrid = styled.div`
 margin-left: 80px;
 margin-top: 220px;
 max-width: 575px;
+
 @media (max-width: 411px) {
-  max-width: 411px;
-  margin-top:120px;
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: 120px;
   }
 
 `
@@ -125,6 +129,10 @@ display: grid;
 grid-template-columns: repeat(2,auto);
 max-width: 375px;
 align-items: center;
+@media (max-width: 411px) {
+ 
+  
+  }
 `
 const DownloadOnAppStore = styled.div`
 height: 50px;
@@ -143,12 +151,26 @@ background-size: cover;
 
 const LeadingBrandsContainer = styled.div`
 margin-top: 80px;
+@media (max-width: 411px) {
+
+  
+  }
 `
 const TrustedBy = styled(CaptionOne)`
+@media (max-width: 411px) {
+
+  }
 `
 const LeadingBrandsLogoContainer = styled.div`
 display: grid;
-grid-template-columns: repeat(4, auto)
+grid-template-columns: repeat(4, auto);
+
+@media (max-width: 411px) {
+
+  
+  }
+
+
 `
 
 
