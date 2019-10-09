@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 import styled, {keyframes} from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import FirstIllustration from "../images/first-Illustration.png"
+import FirstIllustration from "../images/shapes_collaboration.png"
 import AppStoreImage from "../images/Download_on_the_App_Store.svg"
 import GooglePlayImage from "../images/google-play-badge.png"
 import LogoCards from "../components/LogoCards"
+import HowItWorksCards from "../components/HowItWorksCards"
 
 class IndexPage extends React.Component {
   render() {
@@ -48,11 +49,24 @@ class IndexPage extends React.Component {
               </LeadingBrandsLogoContainer>
           </LeadingBrandsContainer>
           
-      </LeftGrid>
-      <RightGrid>
+       </LeftGrid>
+       <RightGrid>
          <TruckIllustration/>
-      </RightGrid>
+        </RightGrid>
      </FirstBlockContainer>
+
+     <SecondBlockContainer>
+
+        <HowCardsContainer>
+        <HowItWorksCards/>
+        <HowItWorksCards/>
+        <HowItWorksCards/>
+        </HowCardsContainer>
+
+
+     </SecondBlockContainer>
+
+
     </Container>
   </Layout>
   )
@@ -89,6 +103,7 @@ font-weight: 500;
 // PAGE STYLING BEGINS HERE
 const Container = styled.div`
 background-color: white;
+
 @media (max-width: 411px) {
   
   }
@@ -97,28 +112,86 @@ background-color: white;
 const FirstBlockContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(2,auto);
+grid-column-gap: 10px;
 
+@media (max-width: 900px) {
+  
+}
+@media (max-width: 600px) {
+  display: grid;
+  justify-items: center;
+  }
 @media (max-width: 411px) {
 
   }
 
 `
 
-//Left [Firstblock]
+//SET UP LEFT AND RIGHT GRIDS [First block]] <------------------[]
 const LeftGrid = styled.div`
 margin-left: 80px;
-margin-top: 220px;
-max-width: 575px;
+margin-top: 200px;
+max-width:575px;
+background-color: white;
+
+@media (max-width: 1024px) {
+  max-width: 462px;
+  margin-left: 30px;
+  background-color: white;
+  }
+
+@media (max-width: 900px) {
+ max-width: 400px;
+ margin-left: 30px;
+ background-color: white;
+  }
+
+  @media (max-width: 600px) {
+  
+  }
 
 @media (max-width: 411px) {
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 120px;
+  max-width: 351px;
   }
 
 `
 
+const RightGrid = styled.div`
+margin-top: 150px;
+margin-right: 80px;
+max-width:575px;
+justify-content:center;
+align-content:center;
+display:grid;
+
+
+@media (max-width: 1024px) {
+  max-width: 462px;
+  margin-right: 30px;
+  }
+@media (max-width: 900px) {
+ max-width: 400px;
+ 
+  }
+  @media (max-width: 600px) {
+  display: none;
+  }
+
+@media (max-width: 411px) {
+  display: none;
+  }
+
+`
+
+// LEFT GRID [First block] <------------------[]
 const FirstHeadline = styled(HeadlineOne)`
+@media (max-width: 900px) {
+ font-size: 48px;
+ line-height: 56px
+  }
 `
 
 const FirstParagraph = styled(Paragraph)`
@@ -129,7 +202,8 @@ display: grid;
 grid-template-columns: repeat(2,auto);
 max-width: 375px;
 align-items: center;
-@media (max-width: 411px) {
+
+@media (max-width: 1024px) {
  
   
   }
@@ -147,12 +221,11 @@ width: 184px;
 background: url(${GooglePlayImage});
 background-size: cover;
 `
-//LEADING BRANDS
-
+//LEADING BRANDS <------------------[]
 const LeadingBrandsContainer = styled.div`
 margin-top: 80px;
-@media (max-width: 411px) {
-
+@media (max-width: 1024px) {
+  max-width: 462px;
   
   }
 `
@@ -167,25 +240,54 @@ grid-template-columns: repeat(4, auto);
 
 @media (max-width: 411px) {
 
-  
   }
-
-
 `
 
 
-//Right [First block]
-const RightGrid = styled.div`
-margin-top: 200px;
-
-@media (max-width: 411px) {
-  display: none;
-  }
-
+//RIGHT GRID [First block] <------------------[]
+/// KEYFRAMES
+const floating = keyframes`
+     from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); } 
 `
+
 const TruckIllustration = styled.div`
-background: url(${FirstIllustration});
+background-image: url(${FirstIllustration});
 background-size: cover;
-height: 395px;
-width: 526px;
+height: 491px;
+width: 575px;
+margin-left: 30px;
+
+/*
+animation-name: ${floating};
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+*/  
+
+@media (max-width: 1024px) {
+  width: 462px;
+  height: 346px;
+  }
+
+@media (max-width: 900px) {
+  width: 400px;
+  height: 300px;
+  }
+`
+
+//SECOND BLOCK
+const SecondBlockContainer = styled.div`
+margin-top: 200px;
+display: grid;
+justify-items: center;
+height: 1440px
+`
+const HowCardsContainer = styled.div`
+max-width: 1280px;
+display:grid;
+grid-template-columns: repeat(3, auto);
+column-gap: 30px;
+
 `

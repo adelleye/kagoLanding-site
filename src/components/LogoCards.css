@@ -11,6 +11,16 @@ display: grid;
     object-fit: contain;
 }
 
+@media (max-width: 822px) {
+    .LogoCard{
+        width: 70px;
+       height: 30px;
+       align-items: center;
+       display: grid;
+       } 
+}
+
+
 @media (max-width: 411px) {
     .LogoCard{
         width: 50px;

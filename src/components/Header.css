@@ -9,7 +9,7 @@
   .HeaderScrolled {
     background: rgba(255, 255, 255, 0.1);
     transition: 1s;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
   }
   
   #site-title {
@@ -37,11 +37,16 @@
   }
   
   .Header a {
-    color: black;
-    font-weight: 400;
+    color: rgba(1,27,51,0.5);
+    font-weight: 500;
     font-size: 16px;
     line-height: 29px;
     text-decoration: none;
+    transition: 1s;
+  }
+  .Header a:hover{
+    color: rgba(1, 93, 242, 1);
+    transition: 1s;
   }
 
 #get-started{
@@ -71,6 +76,16 @@
     transform: translateY(-3px);
   }
   
+/* MEDIA CALLS*/
+@media (max-width: 1024px){
+
+  #get-started{
+    margin-right: 30px;
+  }
+}
+
+
+
   @media (max-width: 411px) {
     .Header{
       grid-template-columns: repeat(2, auto);
@@ -83,8 +98,5 @@
     .HeaderGroup {
       display: none;
     }
-    #get-started{
-      
-      margin-right: 30px;
-  }
+   
   }
