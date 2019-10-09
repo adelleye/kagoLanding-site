@@ -1,101 +1,94 @@
 .Header {
-    /*position: fixed;*/
-    
-    padding: 25px;
-    z-index: 100;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-  }
-  .HeaderScrolled {
-    background: rgba(255, 255, 255, 0.1);
-    transition: 1s;
-    backdrop-filter: blur(10px);
-  }
-  
-  #site-title {
-    margin: auto;
-    margin-left: 50px;
-    align-items: left;
-    justify-items: left;
-  }
-  
-  #site-title a {
-    color: black;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  
-  .HeaderGroup {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    column-gap: 30px;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .Header a {
-    color: rgba(1,27,51,0.5);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 29px;
-    text-decoration: none;
-    transition: 1s;
-  }
-  .Header a:hover{
-    color: rgba(1, 93, 242, 1);
-    transition: 1s;
-  }
+  /*position: fixed;*/
 
-#get-started{
-    display: flex;
-    align-content: flex-end;
-    margin-right: 50px;
+  padding: 25px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.HeaderScrolled {
+  background: rgba(255, 255, 255, 0.1);
+  transition: 1s;
+  backdrop-filter: blur(10px);
 }
 
+#site-title {
+  margin: auto;
+  margin-left: 50px;
+  align-items: left;
+  justify-items: left;
+}
 
-  #get-started button {
-    background-color: rgba(0, 6, 69, 1);
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    margin: auto;
-    margin-right: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 1s;
-  }
-  
-  #get-started button:hover {
-    background-color: rgba(1, 93, 242, 1);
-    color: rgba(255, 255, 255, 0.7);
-    transform: translateY(-3px);
-  }
-  
+#site-title a {
+  color: rgba(1, 27, 51, 0.8);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.HeaderGroup {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 30px;
+  align-items: center;
+}
+
+.Header a {
+  color: rgba(1, 27, 51, 1);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: 1s;
+}
+.Header a:hover {
+  color: rgba(128, 170, 255, 1);
+  transition: 1s;
+}
+
+#get-started {
+  display: flex;
+  align-content: flex-end;
+  margin-right: 50px;
+}
+
+#get-started button {
+  /* background-color: rgba(0, 6, 69, 1);*/
+  background-color: rgba(1, 93, 242, 0.85);
+  padding: 12px 22px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: auto;
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#get-started button:hover {
+  background-color: rgba(1, 93, 242, 1);
+  transform: translateY(-3px);
+}
+
 /* MEDIA CALLS*/
-@media (max-width: 1024px){
-
-  #get-started{
+@media (max-width: 1024px) {
+  #get-started {
     margin-right: 30px;
   }
 }
 
-
-
-  @media (max-width: 411px) {
-    .Header{
-      grid-template-columns: repeat(2, auto);
-    }
-    #site-title {
-     
-      margin-left: 0px;
-      
-    }
-    .HeaderGroup {
-      display: none;
-    }
-   
+@media (max-width: 411px) {
+  .Header {
+    grid-template-columns: repeat(2, auto);
   }
+  #site-title {
+    margin-left: 0px;
+  }
+  .HeaderGroup {
+    display: none;
+  }
+}

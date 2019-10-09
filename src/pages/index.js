@@ -301,5 +301,5 @@ const HowCardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 40px;
-  margin-top: 70px;
+  margin-top: 30px;
 `
