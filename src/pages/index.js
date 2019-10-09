@@ -66,14 +66,21 @@ class IndexPage extends React.Component {
              <HowItWorksCards
                 cardNumber = "1/3"
                 image = {require("../images/creative_teams.png")}
+                headline = "Request in the app"
+                paragraph = "Set your pickup location and destination, 
+                              choose the size of vehicle that is right for you, and when you would like us to arrive."
              />
             <HowItWorksCards
                 cardNumber = "2/3"
                 image = {require("../images/marketing_and_comms.png")}
+                headline = "Don't lift a finger"
+                paragraph = "We'll take it from here. Two strong Kagoers arrive to load your stuff and secure it safely. We'll see you at your destination!"
             />
             <HowItWorksCards
                 cardNumber = "3/3"
                 image = {require("../images/product_and_ux.png")}
+                headline = "Rate and tip"
+                paragraph = "We unload your items and place them right where you want them. Tell us about your experience and tip your Kagoers for a job well done."
             />
          </HowCardsContainer>
 
@@ -301,6 +308,7 @@ animation-timing-function: ease-in-out;
 //SECOND BLOCK
 const SecondBlockContainer = styled.div`
 margin-top: 150px;
+height: 800px;
 display: grid;
 justify-items: center;
 
