@@ -34,7 +34,9 @@ class Header extends React.Component {
   render() {
     return (
       <div
-        className={this.state.hasScrolled ? "Header HeaderScrolled" : "Header"}
+        //className={this.state.hasScrolled ? "Header HeaderScrolled" : "Header"}
+        className="Header"
+
       >
         <div id="site-title">
           <Link to = "/"> Kago </Link>

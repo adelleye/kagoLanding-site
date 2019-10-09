@@ -31,11 +31,12 @@ class IndexPage extends React.Component {
           </DownloadAppContainer>
           <LeadingBrandsContainer>
               <TrustedBy>
-              Trusted by leading brands across Africa
+                Trusted by leading brands across Africa
               </TrustedBy>
               <LeadingBrandsLogoContainer>
               <LogoCards
                  image={require("../images/zip.png")}
+
                  />
                  <LogoCards
                  image={require("../images/olam.png")}
@@ -57,11 +58,24 @@ class IndexPage extends React.Component {
 
      <SecondBlockContainer>
 
-        <HowCardsContainer>
-        <HowItWorksCards/>
-        <HowItWorksCards/>
-        <HowItWorksCards/>
-        </HowCardsContainer>
+         <HowItWorks> 
+             How it works
+         </HowItWorks>
+
+         <HowCardsContainer>
+             <HowItWorksCards
+                cardNumber = "1/3"
+                image = {require("../images/creative_teams.png")}
+             />
+            <HowItWorksCards
+                cardNumber = "2/3"
+                image = {require("../images/marketing_and_comms.png")}
+            />
+            <HowItWorksCards
+                cardNumber = "3/3"
+                image = {require("../images/product_and_ux.png")}
+            />
+         </HowCardsContainer>
 
 
      </SecondBlockContainer>
@@ -79,7 +93,7 @@ export default IndexPage
 
 
 
-// STYLED CSS--- Objects
+// STYLED CSS-------- Fonts
 const Paragraph = styled.p`
 font-size:18px;
 line-height: 25px;
@@ -92,6 +106,13 @@ line-height: 67px;
 color: rgba(0,6,69,1.0);
 font-weight: 500;
 `
+const HeadlineThree = styled.h3`
+font-size:36px;
+line-height: 44px;
+color: rgba(0,6,69,1.0);
+font-weight: 500;
+`
+
 const CaptionOne = styled.p`
 font-size:16px;
 line-height: 23px;
@@ -130,7 +151,7 @@ grid-column-gap: 10px;
 //SET UP LEFT AND RIGHT GRIDS [First block]] <------------------[]
 const LeftGrid = styled.div`
 margin-left: 80px;
-margin-top: 200px;
+margin-top: 140px;
 max-width:575px;
 background-color: white;
 
@@ -160,7 +181,7 @@ background-color: white;
 `
 
 const RightGrid = styled.div`
-margin-top: 150px;
+margin-top: 90px;
 margin-right: 80px;
 max-width:575px;
 justify-content:center;
@@ -279,15 +300,20 @@ animation-timing-function: ease-in-out;
 
 //SECOND BLOCK
 const SecondBlockContainer = styled.div`
-margin-top: 200px;
+margin-top: 150px;
 display: grid;
 justify-items: center;
-height: 1440px
+
 `
+
+const HowItWorks = styled(HeadlineThree) `
+`
+
+
 const HowCardsContainer = styled.div`
 max-width: 1280px;
 display:grid;
 grid-template-columns: repeat(3, auto);
-column-gap: 30px;
-
+column-gap: 40px;
+margin-top: 70px;
 `
