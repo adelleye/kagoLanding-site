@@ -13,7 +13,7 @@ const FooterContainer = styled.div`
   width: 100%;
   height: 300px;
   background-color: rgba(247, 249, 252, 1);
-  margin-top: 100px;
+
   display: grid;
   align-items: center;
 `

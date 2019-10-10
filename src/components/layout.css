@@ -1,35 +1,38 @@
 @font-face {
-  font-family: Graphik ;
+  font-family: Graphik;
   src: url(../fonts/graphik-web/Graphik-Light-Web.woff2);
   font-weight: 300;
 }
 
 @font-face {
-  font-family: Graphik ;
+  font-family: Graphik;
   src: url(../fonts/graphik-web/Graphik-Regular-Web.woff2);
   font-weight: 400;
 }
 @font-face {
-  font-family: Graphik ;
+  font-family: Graphik;
   src: url(../fonts/graphik-web/Graphik-Medium-Web.woff2);
   font-weight: 500;
 }
 
 @font-face {
-  font-family: Graphik ;
+  font-family: Graphik;
   src: url(../fonts/graphik-web/Graphik-Bold-Web.woff2);
   font-weight: 600;
 }
 
-
-
 * {
-  font-family: Graphik, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
- margin:0;
- -webkit-font-smoothing: antialiased;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
   background-color: white;
+  position: relative;
+}
+
+.Hero svg {
   position: relative;
 }

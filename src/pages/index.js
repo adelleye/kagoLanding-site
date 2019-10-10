@@ -41,8 +41,29 @@ class IndexPage extends React.Component {
             </RightGrid>
           </FirstBlockContainer>
 
+          <WaveBlockContainer className="Hero">
+            <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
+              <path fill="#EAF6FC">
+                <animate
+                  repeatCount="indefinite"
+                  fill="freeze"
+                  attributeName="d"
+                  dur="30s"
+                  values="M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+
+                   M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z;
+
+                   M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
+ 
+                  M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;"
+                />
+              </path>
+            </svg>
+          </WaveBlockContainer>
+
           <SecondBlockContainer>
-            <HowItWorks>How it works</HowItWorks>
+            <HowItWorks>Here's how it works</HowItWorks>
+            <InThreeSteps>Your cargo moved in 3 easy steps</InThreeSteps>
 
             <HowCardsContainer>
               <HowItWorksCards
@@ -116,6 +137,13 @@ const CaptionOne = styled.p`
   line-height: 23px;
   color: rgba(1, 27, 51, 1);
   font-weight: 500;
+`
+
+const Subtext = styled.p`
+  font-size: 16px;
+  line-height: 23px;
+  color: rgba(150, 158, 189, 1);
+  font-weight: 400;
 `
 
 // PAGE STYLING BEGINS HERE
@@ -244,6 +272,7 @@ const GetItOnGoogle = styled.div`
 //LEADING BRANDS <------------------[]
 const LeadingBrandsContainer = styled.div`
   margin-top: 80px;
+  max-width: 462px;
   @media (max-width: 1024px) {
     max-width: 462px;
   }
@@ -254,7 +283,7 @@ const TrustedBy = styled(CaptionOne)`
 `
 const LeadingBrandsLogoContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
 
   @media (max-width: 411px) {
   }
@@ -287,14 +316,22 @@ animation-timing-function: ease-in-out;
   }
 `
 
+// WAVEBLOCK
+const WaveBlockContainer = styled.div``
 //SECOND BLOCK
 const SecondBlockContainer = styled.div`
-  margin-top: 150px;
+  margin-top: -15px;
   display: grid;
   justify-items: center;
+  background-color: #eaf6fc;
+  z-index: -100;
 `
 
 const HowItWorks = styled(HeadlineThree)``
+
+const InThreeSteps = styled(Subtext)`
+  margin-top: -25px;
+`
 
 const HowCardsContainer = styled.div`
   max-width: 1280px;
