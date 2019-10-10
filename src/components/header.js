@@ -5,7 +5,7 @@ import "./Header.css"
 class Header extends React.Component {
   //When a component is created, the constructor will be called.
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       hasScrolled: false,
@@ -17,8 +17,8 @@ class Header extends React.Component {
     window.addEventListener("scroll", this.handleScroll)
   }
   handleClick = () => {
-    window.open('http://kago-frontend-dev.herokuapp.com/')
-   }
+    window.open("http://kago-frontend-dev.herokuapp.com/")
+  }
 
   /*The handleScroll function will get the Y position of the scrolling. When the scrolling hits more than 50px, it’ll set a new state for our hasScrolled boolean to true. Otherwise, it’ll set it back to false.*/
   handleScroll = event => {
@@ -36,10 +36,9 @@ class Header extends React.Component {
       <div
         //className={this.state.hasScrolled ? "Header HeaderScrolled" : "Header"}
         className="Header"
-
       >
         <div id="site-title">
-          <Link to = "/"> Kago </Link>
+          <Link to="/"> Kago </Link>
         </div>
         <div className="HeaderGroup">
           <Link to="/about-us">About</Link>
@@ -47,8 +46,8 @@ class Header extends React.Component {
           <Link to="/contact-us">Contact Us</Link>
         </div>
 
-        <div id="get-started" >
-          <button onClick={this.handleClick}>Get Started</button>
+        <div id="get-started">
+          <button onClick={this.handleClick}>Get It Now</button>
         </div>
       </div>
     )
