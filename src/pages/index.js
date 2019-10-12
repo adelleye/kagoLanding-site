@@ -7,6 +7,8 @@ import AppStoreImage from "../images/Download_on_the_App_Store.svg"
 import GooglePlayImage from "../images/google-play-badge.png"
 import LogoCards from "../components/LogoCards"
 import HowItWorksCards from "../components/HowItWorksCards"
+import HomeIphone from "../images/home-kago.png"
+import OnTripIphone from "../images/on-trip.png"
 
 class IndexPage extends React.Component {
   render() {
@@ -89,9 +91,13 @@ class IndexPage extends React.Component {
 
           <ThirdBlockContainer>
             <PhoneContainer>
-              <FirstPhoneDiv />
+              <FirstPhoneDiv>
+                <IphoneHomeBG />
+              </FirstPhoneDiv>
 
-              <SecondPhoneDiv />
+              <SecondPhoneDiv>
+                <IphoneOnTripBG />
+              </SecondPhoneDiv>
             </PhoneContainer>
 
             <BenefitsContainer>
@@ -390,6 +396,16 @@ const FirstPhoneDiv = styled.div`
   border-radius: 30px;
   background-color: white;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const IphoneHomeBG = styled.div`
+  width: 276px;
+  height: 623px;
+  background-image: url(${HomeIphone});
+  background-size: cover;
+  border-radius: 30px;
 `
 
 const SecondPhoneDiv = styled.div`
@@ -401,6 +417,16 @@ const SecondPhoneDiv = styled.div`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const IphoneOnTripBG = styled.div`
+  width: 276px;
+  height: 623px;
+  background-image: url(${OnTripIphone});
+  background-size: cover;
+  border-radius: 30px;
 `
 
 const BenefitsContainer = styled.div`
