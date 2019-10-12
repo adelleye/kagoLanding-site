@@ -86,6 +86,25 @@ class IndexPage extends React.Component {
               />
             </HowCardsContainer>
           </SecondBlockContainer>
+
+          <ThirdBlockContainer>
+            <PhoneContainer>
+              <FirstPhoneDiv />
+
+              <SecondPhoneDiv />
+            </PhoneContainer>
+
+            <BenefitsContainer>
+              <BenefitsTagline>
+                When shipping runs better, the whole world runs better too
+              </BenefitsTagline>
+              <BenefitsInformation>
+                With clear, upfront pricing and unrivaled visibility, you always
+                have the information needed to make the right business
+                decisions.
+              </BenefitsInformation>
+            </BenefitsContainer>
+          </ThirdBlockContainer>
         </Container>
       </Layout>
     )
@@ -318,6 +337,7 @@ animation-timing-function: ease-in-out;
 
 // WAVEBLOCK
 const WaveBlockContainer = styled.div``
+
 //SECOND BLOCK
 const SecondBlockContainer = styled.div`
   margin-top: -15px;
@@ -339,4 +359,57 @@ const HowCardsContainer = styled.div`
   grid-template-columns: repeat(3, auto);
   column-gap: 40px;
   margin-top: 30px;
+`
+// ThIRD BLOCK
+
+const ThirdBlockContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 60px;
+  height: 844px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+`
+const PhoneContainer = styled.div`
+  width: 644px;
+  height: 844px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+`
+const FirstPhoneDiv = styled.div`
+  width: 306px;
+  height: 663px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -100px;
+  margin-left: -150px;
+  border-radius: 30px;
+  background-color: white;
+  position: absolute;
+`
+
+const SecondPhoneDiv = styled.div`
+  width: 306px;
+  height: 663px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 150px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background-color: white;
+`
+
+const BenefitsContainer = styled.div`
+  width: 460px;
+  height: 300px;
+`
+const BenefitsTagline = styled(HeadlineThree)`
+  max-width: 456px;
+`
+const BenefitsInformation = styled(Paragraph)`
+  max-width: 456px;
 `
