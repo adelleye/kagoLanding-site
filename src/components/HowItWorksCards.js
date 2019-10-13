@@ -19,8 +19,8 @@ export default HowItWorksCards
 const HowItWorksCard = styled.div`
   width: 350px;
   height: 455px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   background-color: white;
   margin-bottom: 100px;
 `

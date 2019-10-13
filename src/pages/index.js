@@ -9,6 +9,7 @@ import LogoCards from "../components/LogoCards"
 import HowItWorksCards from "../components/HowItWorksCards"
 import HomeIphone from "../images/home-kago.png"
 import OnTripIphone from "../images/on-trip.png"
+import BackedByCards from "../components/BackedByCards"
 
 class IndexPage extends React.Component {
   render() {
@@ -102,7 +103,7 @@ class IndexPage extends React.Component {
 
             <BenefitsContainer>
               <BenefitsTagline>
-                When shipping runs better, the whole world runs better too
+                When the pick up runs better, the whole world runs better too
               </BenefitsTagline>
               <BenefitsInformation>
                 With clear, upfront pricing and unrivaled visibility, you always
@@ -111,6 +112,37 @@ class IndexPage extends React.Component {
               </BenefitsInformation>
             </BenefitsContainer>
           </ThirdBlockContainer>
+
+          <FourthBlockContainer>
+            <BackedByTextContainer>
+              <BackedByText>Backed by strong global partners</BackedByText>
+              <KagoIsBacked>
+                Kago is backed by notable investors as well as some of the best
+                shipping companies on the planet.
+              </KagoIsBacked>
+            </BackedByTextContainer>
+            <BackedByCardsContainer>
+              <BackedByCards
+                image={require("../images/Taiwo.jpg")}
+                name="Taiwo Afolabi"
+                position="CEO, Sifax Group"
+                review="Kago is highly technical and fanatically customer oriented. We’re excited to work with such people in one of the world’s fastest-growing regions."
+              />
+              <BackedByCards
+                image={require("../images/dangotepic.jpg")}
+                name="Aliko Dangote"
+                position="CEO, Dangote"
+                review="Our investment in Kago aligns with the kind of investments we look for - those that will help extend our reach into the global commerce ecosystem"
+              />
+
+              <BackedByCards
+                image={require("../images/elon.png")}
+                name="Elon Musk"
+                position="CEO, Tesla"
+                review="Kago is highly technical and fanatically customer oriented. We’re excited to work with such people in one of the world’s fastest-growing regions."
+              />
+            </BackedByCardsContainer>
+          </FourthBlockContainer>
         </Container>
       </Layout>
     )
@@ -153,6 +185,12 @@ const HeadlineOne = styled.h1`
 const HeadlineThree = styled.h3`
   font-size: 36px;
   line-height: 44px;
+  color: rgba(0, 6, 69, 1);
+  font-weight: 500;
+`
+const HeadlineFour = styled.h3`
+  font-size: 34px;
+  line-height: 40px;
   color: rgba(0, 6, 69, 1);
   font-weight: 500;
 `
@@ -248,7 +286,7 @@ const RightGrid = styled.div`
   }
 `
 
-// LEFT GRID [First block] <------------------[]
+// LEFT GRID [First block] <------------------[ MOVING YOUR till LEADING BRANDS]
 const FirstHeadline = styled(HeadlineOne)`
   opacity: 0;
   animation: ${MainTextAnimation};
@@ -294,7 +332,7 @@ const GetItOnGoogle = styled.div`
   background: url(${GooglePlayImage});
   background-size: cover;
 `
-//LEADING BRANDS <------------------[]
+//LEADING BRANDS
 const LeadingBrandsContainer = styled.div`
   margin-top: 80px;
   max-width: 462px;
@@ -314,7 +352,7 @@ const LeadingBrandsLogoContainer = styled.div`
   }
 `
 
-//RIGHT GRID [First block] <------------------[]
+//RIGHT GRID [First block] <------------------[ ILLUSTRATION on the right]
 
 const TruckIllustration = styled.div`
 background-image: url(${FirstIllustration});
@@ -344,7 +382,7 @@ animation-timing-function: ease-in-out;
 // WAVEBLOCK
 const WaveBlockContainer = styled.div``
 
-//SECOND BLOCK
+//SECOND BLOCK  <------------------[HOW IT WORKS]
 const SecondBlockContainer = styled.div`
   margin-top: -15px;
   display: grid;
@@ -366,7 +404,7 @@ const HowCardsContainer = styled.div`
   column-gap: 40px;
   margin-top: 30px;
 `
-// ThIRD BLOCK
+// THIRD BLOCK  <------------------[BENEFIT (Two Iphone Screens)]
 
 const ThirdBlockContainer = styled.div`
   display: grid;
@@ -433,9 +471,36 @@ const BenefitsContainer = styled.div`
   width: 460px;
   height: 300px;
 `
-const BenefitsTagline = styled(HeadlineThree)`
+const BenefitsTagline = styled(HeadlineFour)`
   max-width: 456px;
 `
 const BenefitsInformation = styled(Paragraph)`
+  margin-top: -20px;
   max-width: 456px;
+`
+// FOURTH BLOCK  <------------------[BACKED BY...]
+const FourthBlockContainer = styled.div`
+  background-color: white;
+  width: 100%;
+  height: 707px;
+`
+const BackedByTextContainer = styled.div`
+  width: 450px;
+  height: 160px;
+  margin-left: 100px;
+  padding-top: 85px;
+`
+const BackedByText = styled(HeadlineThree)``
+const KagoIsBacked = styled(Paragraph)`
+  margin-top: -20px;
+`
+const BackedByCardsContainer = styled.div`
+  width: 1240px;
+  height: 292px;
+  margin-top: 70px;
+  margin-left: 100px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 390px);
+  grid-gap: 35px;
 `
