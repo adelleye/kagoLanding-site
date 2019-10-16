@@ -23,11 +23,14 @@ const BackedByCard = styled.div`
   background-color: white;
   width: 390px;
   height: 292px;
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   display: grid;
   grid-template-rows: 50px 105px;
   grid-gap: 60px;
+  @media (max-width: 480px) {
+    width: 90vw;
+  }
 `
 const ProfilePicAndNameContainer = styled.div`
   width: 195px;
@@ -67,6 +70,9 @@ const ReviewContainer = styled.div`
   width: 320px;
   height: 105px;
   margin-left: 35px;
+  @media (max-width: 480px) {
+    width: 75vw;
+  }
 `
 const Review = styled.p`
   font-size: 16px;

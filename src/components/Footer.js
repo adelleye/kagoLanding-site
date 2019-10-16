@@ -76,6 +76,10 @@ const FooterContainer = styled.div`
   width: 100%;
   height: 250px;
   background-color: rgba(247, 249, 252, 1);
+  @media (max-width: 480px) {
+    height: 100%;
+    padding-bottom: 40px;
+  }
 `
 
 const InnerFooterContainer = styled.div`
@@ -85,6 +89,12 @@ const InnerFooterContainer = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 const SupportContainer = styled.div``

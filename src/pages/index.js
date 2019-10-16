@@ -228,7 +228,8 @@ const FirstBlockContainer = styled.div`
     display: grid;
     justify-items: center;
   }
-  @media (max-width: 411px) {
+  @media (max-width: 480px) {
+    max-width: 480px;
   }
 `
 
@@ -254,10 +255,9 @@ const LeftGrid = styled.div`
   @media (max-width: 600px) {
   }
 
-  @media (max-width: 411px) {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 120px;
+  @media (max-width: 480px) {
+    margin-left: auto;
+    margin-top: 100px;
     max-width: 351px;
   }
 `
@@ -380,21 +380,29 @@ animation-timing-function: ease-in-out;
 `
 
 // WAVEBLOCK
-const WaveBlockContainer = styled.div``
+const WaveBlockContainer = styled.div`
+  width: 100%;
+`
 
 //SECOND BLOCK  <------------------[HOW IT WORKS]
 const SecondBlockContainer = styled.div`
   margin-top: -15px;
   display: grid;
+  width: 100%;
   justify-items: center;
   background-color: #eaf6fc;
   z-index: -100;
 `
 
-const HowItWorks = styled(HeadlineThree)``
+const HowItWorks = styled(HeadlineThree)`
+  width: 100%;
+  text-align: center;
+`
 
 const InThreeSteps = styled(Subtext)`
   margin-top: -25px;
+  width: 100%;
+  text-align: center;
 `
 
 const HowCardsContainer = styled.div`
@@ -403,6 +411,13 @@ const HowCardsContainer = styled.div`
   grid-template-columns: repeat(3, auto);
   column-gap: 40px;
   margin-top: 30px;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    grid-gap: -30px;
+  }
 `
 // THIRD BLOCK  <------------------[BENEFIT (Two Iphone Screens)]
 
@@ -415,6 +430,14 @@ const ThirdBlockContainer = styled.div`
   align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    grid-gap: -30px;
+    height: 100%;
+  }
 `
 const PhoneContainer = styled.div`
   width: 644px;
@@ -424,6 +447,9 @@ const PhoneContainer = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 const FirstPhoneDiv = styled.div`
   width: 306px;
@@ -437,6 +463,10 @@ const FirstPhoneDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    margin-left: 0px;
+    display: none;
+  }
 `
 const IphoneHomeBG = styled.div`
   width: 276px;
@@ -458,6 +488,9 @@ const SecondPhoneDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    margin-left: 0px;
+  }
 `
 const IphoneOnTripBG = styled.div`
   width: 276px;
@@ -470,37 +503,75 @@ const IphoneOnTripBG = styled.div`
 const BenefitsContainer = styled.div`
   width: 460px;
   height: 300px;
+  @media (max-width: 480px) {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 const BenefitsTagline = styled(HeadlineFour)`
   max-width: 456px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 const BenefitsInformation = styled(Paragraph)`
   margin-top: -20px;
   max-width: 456px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 // FOURTH BLOCK  <------------------[BACKED BY...]
 const FourthBlockContainer = styled.div`
   background-color: white;
   width: 100%;
   height: 707px;
+  @media (max-width: 480px) {
+    height: 100%;
+
+    padding-bottom: 40px;
+  }
 `
 const BackedByTextContainer = styled.div`
   width: 450px;
   height: 160px;
   margin-left: 100px;
   padding-top: 85px;
+  @media (max-width: 480px) {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
-const BackedByText = styled(HeadlineThree)``
+const BackedByText = styled(HeadlineThree)`
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`
 const KagoIsBacked = styled(Paragraph)`
   margin-top: -20px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 const BackedByCardsContainer = styled.div`
   width: 1240px;
   height: 292px;
   margin-top: 70px;
   margin-left: 100px;
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 390px);
   grid-gap: 35px;
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    justify-items: center;
+    align-items: center;
+    grid-gap: -30px;
+    height: 100%;
+    width: 100%;
+  }
 `
