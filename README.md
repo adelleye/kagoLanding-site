@@ -1,1 +1,1 @@
-Implementing one of the landing page designs https://www.notion.so/tobisstuff/Kago-landing-26d7dd23a2ed41c3b8bb8e662603e432 I made for Kago. Doing this publicly so if things on the site seem unfinished they probbly are
+Implementing one of the landing page designs https://www.notion.so/tobisstuff/Kago-landing-26d7dd23a2ed41c3b8bb8e662603e432 I made for Kago. Doing this publicly so if things on the site seem unfinished they probably are.
